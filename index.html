@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Analog.</title>
+    <meta name="description" content="a compilation of my analog photos" />
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8">
-  <title>Analog.</title>
-  <meta name="description" content="a compilation of my analog photos">
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <div class="container">
-    <h2 class="text-center">Form Proximity Feedback</h2>
-    <p class="text-center">Move your cursor towards the submit button</p>
-    <form class="form">
-      <div>
-        <div class="flex flex-wrap">
-          <div class="input-group mr-2">
-            <label class="input-label" for="name">Name: </label>
-            <input name="name" type="text">
+  <body>
+    <div class="container">
+      <h2 class="text-center">Form Proximity Feedback</h2>
+      <p class="text-center">Move your cursor towards the submit button</p>
+      <form class="form">
+        <div>
+          <div class="flex flex-wrap">
+            <div class="input-group mr-2">
+              <label class="input-label" for="name">Name: </label>
+              <input required name="name" type="text" class="w-100" />
+              <div class="form__error w-100"></div>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="email">Email: </label>
+              <input name="email" required type="email" id="mail" class="input-md" />
+              <div class="input-md form__error"></div>
+            </div>
           </div>
-          <div class="input-group">
-            <label class="input-label" for="email">Email: </label>
-            <input name="email" type="email" class="input-md">
+
+          <div class="flex flex-wrap">
+            <div class="input-group">
+              <label class="input-label" for="address">Address: </label>
+              <input name="address" class="input-lg" type="text" />
+              <div class="form__error"></div>
+            </div>
+          </div>
+          <div class="flex justify-content-end">
+            <button class="form__button" type="submit">Submit</button>
           </div>
         </div>
+      </form>
+    </div>
+  </body>
 
-        <div class="flex flex-wrap">
-          <div class="input-group">
-            <label class="input-label" for="address">Address: </label>
-            <input name="address" class="input-lg" type="text">
-          </div>
-        </div>
-        <div class="flex justify-content-end">
-          <button type="submit" onclick="">Submit</button>
-        </div>
-
-      </div>
-    </form>
-  </div>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="nearby.js"></script>
+  <script src="controller.js"></script>
+</html>
